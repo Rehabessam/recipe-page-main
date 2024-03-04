@@ -1,0 +1,198 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Red+Hat+Display:wght@700&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Inter:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Outfit:wght@100..900&family=Red+Hat+Display:wght@700&family=Young+Serif&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --font-family-one: 'Young Serif', serif;
+    --font-family-two:'Outfit', sans-serif;
+}
+:root
+{
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-raspberry: hsl(332, 51%, 32%);
+
+    --White: hsl(0, 0%, 100%);
+    --Rose-white: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-grey: hsl(30, 18%, 87%);
+    --Wenge-brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+body
+{
+    height: 100vh;
+    background-color: var(--Eggshell);
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-two);
+}
+main
+{
+    flex: 1 0 auto;
+    padding: 2rem;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.recipe-card
+{
+    width: 735px;
+    height: auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-top: 4rem;
+    color: var(--Wenge-brown);
+    animation: fade-in 1.2s ease-in;
+}
+
+.img-container
+{
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+.img-container img
+{
+    width: 100%;
+    height: auto;
+    
+}
+.recipe-heading,
+.recipe-sub-heading
+{
+    font-family: var(--font-family-one)
+}
+.recipe-heading
+{
+    color: var(--Dark-Charcoal);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.recipe-description
+{
+    line-height: 1.5rem;
+    font-family: var(--font-family-two);
+}
+.recipe-sub-heading,
+.nutrition-value{
+    color: var(--Nutmeg);
+}
+.nutrition-value{
+    font-weight: 700;
+}
+.prep-container
+{
+    background-color: var(--Rose-white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    padding-bottom: 0.7rem;
+}
+.prep-container h2
+{
+    color: var(--Dark-raspberry);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 0.4rem;
+}
+.prep-container ul li::marker
+{
+    color: var(--Dark-raspberry);
+
+}
+.border-bottom
+{
+    border-bottom: 1px solid var(--Light-grey);
+    align-self: center;
+    margin: 30px 30px 10px;
+   
+}
+.border-bottom span
+{
+    margin-left: 1rem;
+    
+}
+.border-bottom ul li::marker
+{
+    color: var(--Nutmeg);
+}
+.recipe-card ul,
+.recipe-card ol {
+    padding-left: 1.2rem;
+}
+
+.recipe-card ul li,
+.recipe-card ol li {
+    padding-left: 1.5rem;
+    line-height: 2;
+    
+}
+
+.recipe-card ul li::marker,
+.recipe-card ol li::marker {
+    color: var(--Nutmeg);
+}
+
+.recipe-card ol li::marker {
+    font-weight: bold;
+}
+
+.recipe-card p,
+.recipe-card span,
+.recipe-card ul li,
+.recipe-card ol li {
+    font-family: var(--font-family-two);
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 677px) {
+    main{padding: 0;}
+    .recipe-card{
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        border-radius: 0;
+        padding: 0;
+        color: var(--Wenge-brown);
+        background-color: var(--White);
+        animation: fade-in 1.2s ease-in;
+    }
+    .recipe-card div
+    {
+        padding: 0 1.5rem;
+    }
+    .recipe-card .img-container{
+        padding: 0;
+        border-radius: 0;
+    }
+    .recipe-heading
+    {
+        font-size: 2rem;
+        line-height: 1;
+        padding-top: 1rem;
+    }
+    .prep-container{
+        margin: 2.5rem;
+        padding: 1.2rem 1.5rem !important;
+    }
+
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    animation: fade-in 1.5s ease-in;
+    padding-top: 15px;
+ }
+.attribution a { color: hsl(228, 45%, 44%); 
+font-weight: bold;}
+footer{flex-shrink: 0;}
